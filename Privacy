@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Eye & I Studios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #121113;
+    --bg-panel: #1B191C;
+    --bg-panel-2: #221F23;
+    --line: #35313696;
+    --text: #EDE7DD;
+    --text-dim: #9C948A;
+    --amber: #E0942C;
+    --amber-dim: #9C6A22;
+    --red: #E4572E;
+    --green: #7FA65C;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--amber); color:#121113;}
+
+  h1,h2{font-family:'Oswald', sans-serif; text-transform:uppercase; letter-spacing:0.02em;}
+  a{color:var(--amber); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  .wrap{max-width:760px; margin:0 auto; padding:0 24px;}
+
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(18,17,19,0.9); backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex; align-items:center; justify-content:space-between; padding-top:16px; padding-bottom:16px; max-width:1080px;}
+  .brand{font-family:'Oswald',sans-serif; font-weight:700; font-size:1.1rem; letter-spacing:0.06em; color:var(--text);}
+  .brand span{color:var(--amber);}
+  .back-link{font-size:0.82rem; letter-spacing:0.04em; text-transform:uppercase; color:var(--text-dim);}
+  .back-link:hover{color:var(--amber);}
+
+  .content{padding:64px 0 100px;}
+
+  .eyebrow{
+    color:var(--amber); font-family:'JetBrains Mono',monospace; font-size:0.78rem;
+    letter-spacing:0.12em; text-transform:uppercase; margin-bottom:14px;
+  }
+  h1{font-size:clamp(1.8rem, 4vw, 2.6rem); margin-bottom:8px;}
+  .updated{color:var(--text-dim); font-size:0.85rem; margin-bottom:48px; font-family:'JetBrains Mono',monospace;}
+
+  h2{font-size:1.15rem; color:var(--amber); margin-top:40px; margin-bottom:14px;}
+  p{color:var(--text); margin-bottom:14px; font-size:0.98rem;}
+  p.dim{color:var(--text-dim);}
+  ul{margin:0 0 14px 20px; color:var(--text);}
+  li{margin-bottom:8px; font-size:0.98rem;}
+
+  .divider{border:none; border-top:1px solid var(--line); margin:48px 0;}
+
+  footer{padding:40px 0; border-top:1px solid var(--line);}
+  .foot-meta{color:var(--text-dim); font-size:0.78rem; font-family:'JetBrains Mono',monospace; letter-spacing:0.04em;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="index.html" class="brand">EYE <span>&amp;</span> I STUDIOS</a>
+    <a href="index.html" class="back-link">← Back to site</a>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="wrap">
+    <div class="eyebrow">Legal</div>
+    <h1>Privacy Policy</h1>
+    <div class="updated">Last updated: September 2026</div>
+
+    <p>Eye &amp; I Studios ("we," "us," "our") respects your privacy. This policy explains what information we collect when you contact, book, or work with us, and how we use it.</p>
+
+    <h2>Information We Collect</h2>
+    <ul>
+      <li>Contact info you give us — name, phone number, email — when you text, call, or fill out a booking form</li>
+      <li>Session details — project type, scheduling preferences, and how you heard about us</li>
+      <li>Payment information processed through our designated payment provider (Stripe). We do not store your card details ourselves</li>
+      <li>Messages sent through our website chat, SMS, or booking system</li>
+    </ul>
+
+    <h2>How We Use Your Information</h2>
+    <ul>
+      <li>To schedule, confirm, and manage your sessions</li>
+      <li>To process deposits and payments</li>
+      <li>To send appointment reminders, session-related updates, and — if you opt in — occasional promotions or referral requests via text or email</li>
+      <li>To improve how we run the studio and respond to inquiries faster</li>
+    </ul>
+
+    <h2>How We Share Your Information</h2>
+    <p>We do not sell your personal information. We share information only with the tools that keep the studio running — our CRM/scheduling platform (GoHighLevel), our payment processor (Stripe), and our file delivery platform — solely to provide our services to you.</p>
+
+    <h2>SMS &amp; Communication</h2>
+    <p>If you provide your phone number, you may receive texts related to booking, scheduling, and — if you opt in — promotional messages. Message and data rates may apply. You can reply STOP at any time to opt out of texts.</p>
+
+    <h2>Your Choices</h2>
+    <p>You can request access to, correction of, or deletion of your personal information at any time by contacting us directly using the info below. We'll honor deletion requests except where we're required to retain records (e.g. for tax or payment purposes).</p>
+
+    <h2>Data Security</h2>
+    <p>We take reasonable steps to protect your information, including relying on established, secure third-party platforms for payment and communication processing. No method of transmission over the internet is 100% secure, and we can't guarantee absolute security.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p class="dim">We may update this policy from time to time. Changes will be posted on this page with an updated date.</p>
+
+    <hr class="divider">
+
+    <h2>Contact Us</h2>
+    <p>Questions about this policy? Reach out:<br>
+    <a href="sms:+13213641237">321-364-1237</a></p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-meta">EYE &amp; I STUDIOS — RECORDING / MIXING / MASTERING</div>
+  </div>
+</footer>
+
+</body>
+</html>
