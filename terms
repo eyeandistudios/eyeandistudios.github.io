@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Eye & I Studios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #121113;
+    --bg-panel: #1B191C;
+    --bg-panel-2: #221F23;
+    --line: #35313696;
+    --text: #EDE7DD;
+    --text-dim: #9C948A;
+    --amber: #E0942C;
+    --amber-dim: #9C6A22;
+    --red: #E4572E;
+    --green: #7FA65C;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--amber); color:#121113;}
+
+  h1,h2{font-family:'Oswald', sans-serif; text-transform:uppercase; letter-spacing:0.02em;}
+  a{color:var(--amber); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  .wrap{max-width:760px; margin:0 auto; padding:0 24px;}
+
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(18,17,19,0.9); backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex; align-items:center; justify-content:space-between; padding-top:16px; padding-bottom:16px; max-width:1080px;}
+  .brand{font-family:'Oswald',sans-serif; font-weight:700; font-size:1.1rem; letter-spacing:0.06em; color:var(--text);}
+  .brand span{color:var(--amber);}
+  .back-link{font-size:0.82rem; letter-spacing:0.04em; text-transform:uppercase; color:var(--text-dim);}
+  .back-link:hover{color:var(--amber);}
+
+  .content{padding:64px 0 100px;}
+
+  .eyebrow{
+    color:var(--amber); font-family:'JetBrains Mono',monospace; font-size:0.78rem;
+    letter-spacing:0.12em; text-transform:uppercase; margin-bottom:14px;
+  }
+  h1{font-size:clamp(1.8rem, 4vw, 2.6rem); margin-bottom:8px;}
+  .updated{color:var(--text-dim); font-size:0.85rem; margin-bottom:48px; font-family:'JetBrains Mono',monospace;}
+
+  h2{font-size:1.15rem; color:var(--amber); margin-top:40px; margin-bottom:14px;}
+  p{color:var(--text); margin-bottom:14px; font-size:0.98rem;}
+  p.dim{color:var(--text-dim);}
+  ul{margin:0 0 14px 20px; color:var(--text);}
+  li{margin-bottom:8px; font-size:0.98rem;}
+
+  .divider{border:none; border-top:1px solid var(--line); margin:48px 0;}
+
+  footer{padding:40px 0; border-top:1px solid var(--line);}
+  .foot-meta{color:var(--text-dim); font-size:0.78rem; font-family:'JetBrains Mono',monospace; letter-spacing:0.04em;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="index.html" class="brand">EYE <span>&amp;</span> I STUDIOS</a>
+    <a href="index.html" class="back-link">← Back to site</a>
+  </div>
+</nav>
+
+<div class="content">
+  <div class="wrap">
+    <div class="eyebrow">Legal</div>
+    <h1>Terms of Service</h1>
+    <div class="updated">Last updated: September 2026</div>
+
+    <p>These terms apply to anyone booking or receiving services from Eye &amp; I Studios ("the studio," "we," "us"). By booking a session, you agree to the terms below.</p>
+
+    <h2>Booking &amp; Deposits</h2>
+    <ul>
+      <li>Sessions are confirmed only once a deposit is received. A pending booking request does not guarantee a reserved time slot.</li>
+      <li>Deposits are non-refundable if the session is cancelled with less than 24 hours' notice, or in the case of a no-show.</li>
+      <li>If you need to reschedule, reach out as early as possible — we'll do our best to find a new time, but late cancellations may still forfeit the deposit at our discretion.</li>
+    </ul>
+
+    <h2>Payment</h2>
+    <ul>
+      <li>All payments must be made through our official payment link. Do not send payment directly to an engineer via cash, Venmo, CashApp, Zelle, or any other method — this protects both you and the studio.</li>
+      <li>Full payment is expected at or before the completion of services unless a payment arrangement has been agreed to in advance.</li>
+    </ul>
+
+    <h2>Session Files &amp; Delivery</h2>
+    <ul>
+      <li>Final mixes, masters, and stems are delivered through our file delivery platform once payment is complete.</li>
+      <li>Session project files are retained for a limited time after your session. We recommend downloading and backing up your files promptly after delivery — we are not responsible for files lost due to delayed pickup.</li>
+      <li>You own the rights to your recorded performances and final deliverables. The studio retains no ownership claim over your music.</li>
+    </ul>
+
+    <h2>Confidentiality</h2>
+    <p>Anything recorded, played, or discussed in the studio — including unreleased music — is treated as confidential. We do not share, play, or discuss your unreleased work with anyone outside the studio without your permission.</p>
+
+    <h2>Studio Conduct</h2>
+    <ul>
+      <li>Sessions may be ended early, without refund, in the event of disruptive, disrespectful, or unsafe behavior toward staff, equipment, or the space.</li>
+      <li>Please treat the studio and its equipment with care. You may be responsible for the cost of repair or replacement of any equipment damaged through negligence or misuse during your session.</li>
+    </ul>
+
+    <h2>Liability</h2>
+    <p class="dim">Eye &amp; I Studios is not liable for personal injury, loss, or damage to personal property that occurs on the premises, except where caused by our own gross negligence. By entering the studio, you acknowledge and accept this.</p>
+
+    <h2>Changes to These Terms</h2>
+    <p class="dim">We may update these terms from time to time. Continued use of our services after changes are posted constitutes acceptance of the updated terms.</p>
+
+    <hr class="divider">
+
+    <h2>Contact Us</h2>
+    <p>Questions about these terms? Reach out:<br>
+    <a href="sms:+13213641237">321-364-1237</a></p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-meta">EYE &amp; I STUDIOS — RECORDING / MIXING / MASTERING</div>
+  </div>
+</footer>
+
+</body>
+</html>
