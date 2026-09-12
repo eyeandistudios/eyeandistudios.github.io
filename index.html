@@ -177,8 +177,13 @@
   @media (max-width:700px){ .rate-grid{grid-template-columns:1fr;} }
   .rate-card{
     background:var(--bg-panel); border:1px solid var(--line); border-radius:4px; padding:28px;
-    display:flex; flex-direction:column;
+    display:flex; flex-direction:column; position:relative;
   }
+  .engineer-badge{
+    position:absolute; top:18px; right:18px; width:46px; height:46px;
+    border-radius:50%; overflow:hidden; border:2px solid var(--amber);
+  }
+  .engineer-badge img{width:100%; height:100%; object-fit:cover; display:block;}
   .rate-card .rate-label{font-family:'JetBrains Mono',monospace; font-size:0.72rem; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;}
   .rate-card h3{font-size:1.15rem; margin-bottom:14px;}
   .rate-price{font-family:'JetBrains Mono',monospace; font-size:2.1rem; color:var(--amber); margin-bottom:6px;}
@@ -214,6 +219,31 @@
   .offpeak .clock{font-size:1.6rem;}
   .offpeak h4{font-size:0.95rem; margin-bottom:4px;}
   .offpeak p{font-size:0.85rem; color:var(--text-dim);}
+
+  /* ---------- BOOK / CALENDAR ---------- */
+  .calendar-wrap{
+    background:var(--bg-panel);
+    border:1px solid var(--line);
+    border-radius:4px;
+    overflow:visible;
+  }
+  .availability-note{
+    font-family:'JetBrains Mono',monospace; font-size:0.8rem; color:var(--text-dim);
+    margin-bottom:20px; max-width:70ch;
+  }
+  .availability-note strong{color:var(--amber); font-weight:600;}
+
+  /* ---------- MINI TRUST STRIP (under calendar) ---------- */
+  .mini-trust{
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+    margin-top:20px; padding:14px 18px;
+    background:var(--bg-panel); border:1px solid var(--line); border-radius:4px;
+    font-size:0.85rem; color:var(--text-dim);
+  }
+  .mini-trust .mini-stars{color:var(--amber); font-size:0.95rem; letter-spacing:2px; flex-shrink:0;}
+  .mini-trust .mini-score{font-family:'JetBrains Mono',monospace; color:var(--text); font-weight:600; flex-shrink:0;}
+  .mini-trust .mini-quote{font-style:italic; color:var(--text-dim);}
+  .mini-trust .mini-quote .author{color:var(--text); font-style:normal; font-family:'JetBrains Mono',monospace; font-size:0.78rem;}
 
   /* ---------- GALLERY ---------- */
   .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:12px;}
@@ -290,13 +320,9 @@
   .engineer-exp{font-size:0.9rem; color:var(--text); margin-bottom:4px;}
   .engineer-mentor{font-size:0.85rem; color:var(--text-dim); font-style:italic;}
 
-  /* ---------- BOOK ---------- */
-  .calendar-wrap{
-    background:var(--bg-panel);
-    border:1px solid var(--line);
-    border-radius:4px;
-    overflow:visible;
-  }
+  /* ---------- MUSIC EMBED ---------- */
+  .music-embed-wrap{display:flex; justify-content:center;}
+  .music-embed-wrap iframe{border-radius:10px;}
 
   /* ---------- FOOTER ---------- */
   footer{padding:64px 0 40px;}
@@ -320,13 +346,14 @@
   <div class="wrap">
     <div class="brand">EYE <span>&amp;</span> I STUDIOS</div>
     <div class="navlinks">
-      <a href="#rates">Rates</a>
-      <a href="#packages">Membership</a>
-      <a href="#time-collapse">Flagship</a>
       <a href="#process">Process</a>
       <a href="#gallery">Studio</a>
       <a href="#clientele">Clients</a>
+      <a href="#music">Music</a>
+      <a href="#rates">Rates</a>
       <a href="#book">Book</a>
+      <a href="#packages">Membership</a>
+      <a href="#time-collapse">Flagship</a>
     </div>
     <a href="sms:+13213641237" class="nav-cta">Text to Book</a>
   </div>
@@ -408,87 +435,6 @@
   </div>
 </section>
 
-<section id="rates">
-  <div class="wrap">
-    <div class="section-tag">Rates</div>
-    <h2 class="section-title">Pricing</h2>
-    <p class="section-desc">No hidden fees. Pay for time in the booth, or send a session out for mix and master.</p>
-
-    <div class="rate-grid">
-      <div class="rate-card">
-        <div class="rate-label">Studio Time</div>
-        <h3>Recording Session</h3>
-        <div class="rate-price">$50<span class="unit"> /hr</span></div>
-        <div class="rate-note">Engineer included. 1-on-1 recommended, fits up to 3 extra guests.</div>
-        <ul class="rate-list">
-          <li>Standard booking <span class="p">$50/hr</span></li>
-          <li>2-hour minimum <span class="p">—</span></li>
-        </ul>
-      </div>
-      <div class="rate-card">
-        <div class="rate-label">Post-Production</div>
-        <h3>Mixing &amp; Mastering</h3>
-        <div class="rate-price">$350<span class="unit"> /song</span></div>
-        <div class="rate-note">Bundle both — priced to make the full treatment the obvious call.</div>
-        <ul class="rate-list">
-          <li>Mixing only <span class="p">$250</span></li>
-          <li>Mastering only <span class="p">$100</span></li>
-          <li>Mix + Master bundle <span class="p">$350</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="packages">
-  <div class="wrap">
-    <div class="section-tag">Membership</div>
-    <h2 class="section-title">Flowstate Access</h2>
-    <p class="section-desc">Every great artist I've worked with has one thing in common — they make a lot of music. Not one perfect song every few months, but volume: hundreds of songs to pick the hits from. The artists who stay stuck usually aren't lacking talent — they're stuck doing the math every time before they book, wondering if this session is "worth it." Flowstate Access removes that math completely. Book 4 hours in a month and you're basically already breaking even against paying hourly — $119 + 4 hours at $20/hr comes out to just about what 4 hours would've cost you anyway. Every hour after that is just $20, instead of $50. If you're someone who wants to lock in, stay in the booth, and actually build a catalog — this isn't a discount, it's a no-brainer.</p>
-
-    <div class="rate-card" style="max-width:520px;">
-      <span class="badge-best">Limited-Time Rate</span>
-      <div class="rate-label">Monthly Membership</div>
-      <h3>Flowstate Access</h3>
-      <div class="rate-price">
-        <span style="text-decoration:line-through; color:var(--text-dim); font-size:1.3rem; margin-right:10px;">$200</span>$119<span class="unit"> /mo</span>
-      </div>
-      <div class="rate-note">Unlock the studio for the whole month. Come in as often as you want — you only pay the engineer fee per hour you actually use.</div>
-      <ul class="rate-list">
-        <li>Monthly access <span class="p">$119 <span style="color:var(--text-dim); text-decoration:line-through; margin-left:4px;">$200</span></span></li>
-        <li>Engineer fee <span class="p">$20/hr</span></li>
-        <li>Sessions per month <span class="p">Unlimited</span></li>
-      </ul>
-      <div style="margin-top:22px;">
-        <a href="https://tidycal.com/lousho3000/30-minute-meeting" target="_blank" rel="noopener" class="btn-primary" style="width:100%; text-align:center; display:block;">Apply for Flowstate Access</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="time-collapse">
-  <div class="wrap">
-    <div class="section-tag">Flagship Offer</div>
-    <h2 class="section-title">Time Collapse Package</h2>
-    <p class="section-desc">The premium offer for artists who already have traction and a brand, and want to sharpen their sound at a eyeandistudios@gmail.com, in a short, intensive window.</p>
-
-    <div class="rate-card" style="max-width:600px; border-color:var(--amber);">
-      <span class="badge-best">Limited / By Application</span>
-      <div class="rate-label">Multi-Day Intensive</div>
-      <h3>Time Collapse Package</h3>
-      <div class="rate-note" style="font-size:1rem; color:var(--text); margin-bottom:20px;">Most artists spend months chasing a finished project — a session here, a mix revision there, a videographer who's booked out for weeks. By the time it's all done, the momentum's gone. This package compresses all of it — recording, mixing, mastering, and music videos — into one focused stretch of days. Months of work, done in days, while you're still in the moment that inspired it. This package is built for a select group of artists who are serious about moving <strong>FAST</strong>. If it's a good fit, we move forward from there.</div>
-      <ul class="rate-list">
-        <li>Studio intensive <span class="p">Multiple days, full dream team on-site</span></li>
-        <li>Documentation <span class="p">Session fully documented/streamed</span></li>
-        <li>Music videos <span class="p">Included, w/ extra videographers &amp; creative directors</span></li>
-      </ul>
-      <div style="margin-top:22px;">
-        <a href="https://calendly.com/eyeandistudios/artist-strategy-session" target="_blank" rel="noopener" class="btn-primary" style="width:100%; text-align:center; display:block;">Schedule a Free Artist Strategy Call</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="gallery">
   <div class="wrap">
     <div class="section-tag">The Studio</div>
@@ -558,6 +504,72 @@
   </div>
 </section>
 
+<section id="music">
+  <div class="wrap">
+    <div class="section-tag">Hear It For Yourself</div>
+    <h2 class="section-title">Tracked &amp; mixed in this booth</h2>
+    <p class="section-desc">A running playlist of vocal tracking and mixes done right here — press play.</p>
+    <div class="music-embed-wrap">
+      <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/lousho-mixes-tracking/pl.u-kv9lbXVF7kqyWrN"></iframe>
+    </div>
+  </div>
+</section>
+
+<section id="rates">
+  <div class="wrap">
+    <div class="section-tag">Rates</div>
+    <h2 class="section-title">Pricing</h2>
+    <p class="section-desc">No hidden fees. Pay for time in the booth, or send a session out for mix and master.</p>
+
+    <div class="rate-grid">
+      <div class="rate-card">
+        <div class="rate-label">Studio Time</div>
+        <h3>Recording Session</h3>
+        <div class="rate-price">$50<span class="unit"> /hr</span></div>
+        <div class="rate-note">Engineer included. 1-on-1 recommended, fits up to 3 extra guests.</div>
+        <ul class="rate-list">
+          <li>Standard booking <span class="p">$50/hr</span></li>
+          <li>2-hour minimum <span class="p">—</span></li>
+        </ul>
+      </div>
+      <div class="rate-card">
+        <div class="engineer-badge"><img src="images/lousho-engineer.jpg" alt="Lousho"></div>
+        <div class="rate-label">Post-Production</div>
+        <h3>Mixing &amp; Mastering</h3>
+        <div class="rate-price">$350<span class="unit"> /song</span></div>
+        <div class="rate-note">Mixing and mastering done by studio owner and engineer, Lousho — mentored directly by Ben Thomas, Grammy-nominated engineer for Lil Uzi Vert. Top 2% producer ranking on Muso.AI.</div>
+        <ul class="rate-list">
+          <li>Turnaround <span class="p">1-2 weeks</span></li>
+          <li>Mixing only <a href="https://buy.stripe.com/eVq7sLe5WbJrelq47t2ZO17" target="_blank" rel="noopener" class="p">$250</a></li>
+          <li>Mastering only <a href="https://buy.stripe.com/eVq5kDbXOdRzfpucDZ2ZO18" target="_blank" rel="noopener" class="p">$100</a></li>
+          <li>Mix + Master bundle <a href="https://buy.stripe.com/14A7sL3ri3cVelq7jF2ZO19" target="_blank" rel="noopener" class="p">$350</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="section-tag">Schedule a Session</div>
+    <h2 class="section-title">Book Your Time</h2>
+    <p class="availability-note"><strong>2-hour minimum.</strong> Engineers available daily 12pm–2am ET. Need a time outside that window? Text us at 321-364-1237.</p>
+    <div class="calendar-wrap">
+      <iframe
+        src="https://api.leadconnectorhq.com/widget/booking/7RYqzvgFg0QXNYW8CeTl"
+        style="width:100%;border:none;overflow:hidden;"
+        scrolling="no"
+        id="7RYqzvgFg0QXNYW8CeTl_1789071973745">
+      </iframe>
+    </div>
+    <div class="mini-trust">
+      <span class="mini-stars">★★★★★</span>
+      <span class="mini-score">5.0 on Google</span>
+      <span class="mini-quote">"Great time! Lit vibes, professional!" <span class="author">— Deontae Royal</span></span>
+    </div>
+  </div>
+</section>
+
 <section id="engineers">
   <div class="wrap">
     <div class="section-tag">The Team</div>
@@ -591,18 +603,51 @@
   </div>
 </section>
 
-<section id="book">
+<section id="packages">
   <div class="wrap">
-    <div class="section-tag">Schedule a Session</div>
-    <h2 class="section-title">Book Your Time</h2>
-    <p class="section-desc">2-hour minimum. Engineers available daily 12pm–2am ET. Need a time outside that window? Text us at 321-364-1237.</p>
-    <div class="calendar-wrap">
-      <iframe
-        src="https://api.leadconnectorhq.com/widget/booking/7RYqzvgFg0QXNYW8CeTl"
-        style="width:100%;border:none;overflow:hidden;"
-        scrolling="no"
-        id="7RYqzvgFg0QXNYW8CeTl_1789071973745">
-      </iframe>
+    <div class="section-tag">Membership</div>
+    <h2 class="section-title">Flowstate Access</h2>
+    <p class="section-desc">Every great artist I've worked with has one thing in common — they make a lot of music. Not one perfect song every few months, but volume: hundreds of songs to pick the hits from. The artists who stay stuck usually aren't lacking talent — they're stuck doing the math every time before they book, wondering if this session is "worth it." Flowstate Access removes that math completely. Book 4 hours in a month and you're basically already breaking even against paying hourly — $119 + 4 hours at $20/hr comes out to just about what 4 hours would've cost you anyway. Every hour after that is just $20, instead of $50. If you're someone who wants to lock in, stay in the booth, and actually build a catalog — this isn't a discount, it's a no-brainer.</p>
+
+    <div class="rate-card" style="max-width:520px;">
+      <span class="badge-best">Limited-Time Rate</span>
+      <div class="rate-label">Monthly Membership</div>
+      <h3>Flowstate Access</h3>
+      <div class="rate-price">
+        <span style="text-decoration:line-through; color:var(--text-dim); font-size:1.3rem; margin-right:10px;">$200</span>$119<span class="unit"> /mo</span>
+      </div>
+      <div class="rate-note">Unlock the studio for the whole month. Come in as often as you want — you only pay the engineer fee per hour you actually use.</div>
+      <ul class="rate-list">
+        <li>Monthly access <span class="p">$119 <span style="color:var(--text-dim); text-decoration:line-through; margin-left:4px;">$200</span></span></li>
+        <li>Engineer fee <span class="p">$20/hr</span></li>
+        <li>Sessions per month <span class="p">Unlimited</span></li>
+      </ul>
+      <div style="margin-top:22px;">
+        <a href="https://tidycal.com/lousho3000/30-minute-meeting" target="_blank" rel="noopener" class="btn-primary" style="width:100%; text-align:center; display:block;">Apply for Flowstate Access</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="time-collapse">
+  <div class="wrap">
+    <div class="section-tag">Flagship Offer</div>
+    <h2 class="section-title">Time Collapse Package</h2>
+    <p class="section-desc">The premium offer for artists who already have traction and a brand, and want to sharpen their sound at a eyeandistudios@gmail.com, in a short, intensive window.</p>
+
+    <div class="rate-card" style="max-width:600px; border-color:var(--amber);">
+      <span class="badge-best">Limited / By Application</span>
+      <div class="rate-label">Multi-Day Intensive</div>
+      <h3>Time Collapse Package</h3>
+      <div class="rate-note" style="font-size:1rem; color:var(--text); margin-bottom:20px;">Most artists spend months chasing a finished project — a session here, a mix revision there, a videographer who's booked out for weeks. By the time it's all done, the momentum's gone. This package compresses all of it — recording, mixing, mastering, and music videos — into one focused stretch of days. Months of work, done in days, while you're still in the moment that inspired it. This package is built for a select group of artists who are serious about moving <strong>FAST</strong>. If it's a good fit, we move forward from there.</div>
+      <ul class="rate-list">
+        <li>Studio intensive <span class="p">Multiple days, full dream team on-site</span></li>
+        <li>Documentation <span class="p">Session fully documented/streamed</span></li>
+        <li>Music videos <span class="p">Included, w/ extra videographers &amp; creative directors</span></li>
+      </ul>
+      <div style="margin-top:22px;">
+        <a href="https://calendly.com/eyeandistudios/artist-strategy-session" target="_blank" rel="noopener" class="btn-primary" style="width:100%; text-align:center; display:block;">Schedule a Free Artist Strategy Call</a>
+      </div>
     </div>
   </div>
 </section>
